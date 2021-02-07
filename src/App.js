@@ -7,7 +7,6 @@ export default class App extends Component {
     return (
       <div>
         <Home />
-        {/* <Blog2 /> */}
       </div>
     )
   }

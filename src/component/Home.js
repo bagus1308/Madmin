@@ -5,10 +5,10 @@ import Resume from './Resume'
 import MainMenu from './MainMenu'
 import Portofolio from './Portofolio'
 import Skill from './Skill'
-//import Blog from './Blog'
+import Blog from './Blog'
 import FormError from './FormError'
 import Contact from './Contact'
-import Blog2 from './Blog2'
+// import Blog2 from './Blog2'
 
 
 export default class Home extends Component {
@@ -23,7 +23,7 @@ export default class Home extends Component {
                     <Resume />
                     <Portofolio/>
                     <Skill />
-                    <Blog2 />
+                    <Blog />
                     <Contact />
 
 
