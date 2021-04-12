@@ -14,12 +14,12 @@ export default class Blog extends Component {
 		};
 	  }
 	 getapi=()=>{
-		axios.get(`https://dummyapi.io/data/api/user/0F8JIqi4zwvb77FGz6Wt/post?limit=10`, { headers: { 'app-id': '601f98272a899f3af17cfd36' }},{delayed : true} )
+		axios.get(`https://okservapi.herokuapp.com/category`)
 		.then(response =>
 			response.data.data.map(
 			  datanya => ({
-				image: `${datanya.image}`,
-				text: `${datanya.text}`
+				photo: `${datanya.photo}`,
+				type: `${datanya.type}`
 			
 			  })
 			 
@@ -49,16 +49,16 @@ export default class Blog extends Component {
 		const { isLoading, datas } = this.state;
         return (
 			
-            <div class="section-vcardbody section-page" id="page-blog">
-                <div class="section-blog">
-                <h2 class="section-title">Blog</h2>
-                <div class="blog-posts">
-                {this.state.datas.map((blog) => {
+            <div className="section-vcardbody section-page" id="page-category">
+                <div className="section-blog">
+                <h2 className="section-title">Category</h2>
+                <div className="blog-posts">
+                {this.state.datas.map((category) => {
 				  return <div className="blog-item">
                         <div className="blog-item-wrapper">
                             <div className="blog-item-thumb">
-							<img src={blog.image} />
-                             {blog.text}
+							                <img src={category.photo} />
+                             {category.type}
                             </div>
                         </div>
                     </div>
